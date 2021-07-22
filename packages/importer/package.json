@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sync": "firebase firestore:delete --all-collections --project mateadmin-50901 && node import.js posts.json geo=location && node import.js category.json && node import.js users.json",
+    "sync": "firebase firestore:delete --all-collections -y --project sellit-201db && node import.js posts.json geo=location && node import.js category.json && node import.js users.json",
     "export": "node export.js posts && node export.js category && node export.js users"
   },
   "keywords": [

@@ -1,6 +1,6 @@
 const admin = require('firebase-admin');
 const fs = require('fs');
-const serviceAccount = require('./headless-graphql-firebase-config.json');
+const serviceAccount = require('./headless-graphql-firebase-config');
 const dotenv = require('dotenv');
 
 dotenv.config();

@@ -19,7 +19,7 @@ export default class CustomDocument extends Document {
         ...initialProps,
         styles: (
           <>
-            {initialProps.styles}
+            {/* {initialProps.styles} */}
             {sheet.getStyleElement()}
           </>
         ),
