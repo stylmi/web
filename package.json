@@ -1,0 +1,53 @@
+{
+	"name": "headless-graphql",
+	"version": "1.0.0",
+	"private": true,
+	"author": "RedQ, Inc.",
+	"devDependencies": {
+		"husky": "^3.0.4",
+		"lerna": "^3.16.4",
+		"lint-staged": "^9.2.4",
+		"prettier": "^1.18.2",
+		"rimraf": "^3.0.0"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"clean": "lerna clean --yes && rimraf node_modules",
+		"clean:build": "lerna exec -- rimraf \"{.next,dist,out,build,.docz,.cache, public,cloud}\"",
+		"start": "lerna run --parallel dev",
+		"preweb:build": "rm -rf packages/cloud",
+		"preweb:staging": "rm -rf packages/cloud",
+		"web:build": "npm workspace web run build",
+		"web:staging": "npm workspace web run buildstaging",
+		"web": "npm workspace web run dev",
+		"server": "npm workspace server run dev",
+		"server:build": "babel packages/server --out-dir packages/cloud --ignore packages/server/node_modules && cp packages/server/{package.json,.env} packages/cloud/ && cp -r \"packages/web/.next\" \"packages/cloud/next\"",
+		"serve": "cd packages/cloud && NODE_ENV=production firebase emulators:start --only functions,hosting",
+		"deploy": "cd packages/cloud && NODE_ENV=production firebase deploy --only functions,hosting",
+		"shell": "cd packages/cloud && NODE_ENV=production npm run build && firebase functions:shell",
+		"logs": "cd packages/cloud && NODE_ENV=production firebase functions:log",
+		"debug": "npm workspace server run debug",
+		"format": "prettier --trailing-comma es5 --single-quote --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'"
+	},
+	"resolutions": {
+		"graphql": "^14.5.3"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,md,css}": [
+			"prettier --trailing-comma es5 --single-quote --write",
+			"git add"
+		]
+	},
+	"dependencies": {
+		"dotenv": "^8.1.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	}
+}
