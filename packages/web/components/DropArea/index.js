@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from '../../../reusecore/src/elements/Image';
-import Text from '../../../reusecore/src/elements/Text';
-import Heading from '../../../reusecore/src/elements/Heading';
-import UpIcon from '../../../core/static/images/UploadIcon.png';
+import Image from 'reusecore/src/elements/Image';
+import Text from 'reusecore/src/elements/Text';
+import Heading from 'reusecore/src/elements/Heading';
+import UpIcon from 'core/static/images/UploadIcon.png';
 const Container = styled.div`
   border: none;
   width: 100%;

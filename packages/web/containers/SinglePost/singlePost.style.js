@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { palette } from 'styled-theme';
 import { Carousel as RRCarousel } from 'react-responsive-carousel';
-import Text from '../../../reusecore/src/elements/Text';
+import Text from 'reusecore/src/elements/Text';
 
 const Carousel = styled(RRCarousel)`
   .carousel.carousel-slider .slider-wrapper ul.slider {

@@ -1,10 +1,10 @@
 import React from 'react';
 // import Image from 'react-image';
 import PropTypes from 'prop-types';
-import Card from '../../../reusecore/src/elements/Card';
-import Heading from '../../../reusecore/src/elements/Heading';
-import Text from '../../../reusecore/src/elements/Text';
-import PlaceholderImage from '../../../core/static/images/categoryPlaceholder.svg';
+import Card from 'reusecore/src/elements/Card';
+import Heading from 'reusecore/src/elements/Heading';
+import Text from 'reusecore/src/elements/Text';
+import PlaceholderImage from 'core/static/images/categoryPlaceholder.svg';
 
 const CategoryGridCard = ({
   title,

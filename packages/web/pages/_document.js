@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import { GOOGLE_API_KEY } from '../Config';
-import Favicon from '../../core/static/favicon.png';
+import Favicon from 'core/static/favicon.png';
 
 export default class CustomDocument extends Document {
   static async getInitialProps(ctx) {
@@ -19,7 +19,7 @@ export default class CustomDocument extends Document {
         ...initialProps,
         styles: (
           <>
-            {/* {initialProps.styles} */}
+            {initialProps.styles}
             {sheet.getStyleElement()}
           </>
         ),

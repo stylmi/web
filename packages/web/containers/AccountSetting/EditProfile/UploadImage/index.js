@@ -2,10 +2,10 @@ import React from 'react';
 import Icon from 'react-icons-kit';
 import { iosCamera } from 'react-icons-kit/ionicons/iosCamera';
 import Dropzone from 'react-dropzone';
-import Box from '../../../../../reusecore/src/elements/Box';
-import Image from '../../../../../reusecore/src/elements/Image';
+import Box from 'reusecore/src/elements/Box';
+import Image from 'reusecore/src/elements/Image';
 import { UploadIconWrapper } from './style';
-import Avatar from '../../../../../core/static/images/user-placeholder.svg';
+import Avatar from 'core/static/images/user-placeholder.svg';
 
 const PickImages = ({ onPreviewDrop, proPic, maxSize, onDropRejected }) => (
   <Box flexBox justifyContent="center" pt={40} pb={66}>

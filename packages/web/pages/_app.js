@@ -1,6 +1,6 @@
 import React from 'react';
 import App from 'next/app';
-import { GlobalStyles } from '../../core/static/global.style';
+import { GlobalStyles } from 'core/static/global.style';
 import { ThemeProvider } from 'styled-components';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '@redq/reuse-modal/lib/index.css';

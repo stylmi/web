@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import firebase from 'firebase';
 import { withFormik } from 'formik';
-import Heading from '../../../../reusecore/src/elements/Heading';
-import Button from '../../../../reusecore/src/elements/Button';
+import Heading from 'reusecore/src/elements/Heading';
+import Button from 'reusecore/src/elements/Button';
 import Input from '../../../components/Input';
 
 import MobileNumberList from './MobileNumberList';

@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { CURRENCY } from '../../../Config';
-import { SINGLE_POST_PAGE } from '../../../../core/navigation/constant';
+import { SINGLE_POST_PAGE } from 'core/navigation/constant';
 import CardLoader from '../../../components/Loader/CardLoader';
-import ListGrid from '../../../../reusecore/src/elements/ListGrid';
-import Box from '../../../../reusecore/src/elements/Box';
+import ListGrid from 'reusecore/src/elements/ListGrid';
+import Box from 'reusecore/src/elements/Box';
 import PostCard from '../../../components/PostCard';
 
 const RelatedPost = props => {

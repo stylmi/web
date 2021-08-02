@@ -8,12 +8,12 @@ import LoginModal from '../../ModalContainer/LoginModal';
 import ContactInfoModal from '../../ModalContainer/ContactInfoModal';
 import { CURRENCY } from '../../../Config';
 import { useMutation } from '@apollo/react-hooks';
-import { HANDLE_FAV } from '../../../../core/graphql/Mutations';
+import { HANDLE_FAV } from 'core/graphql/Mutations';
 import AuthHelper from '../../../helpers/authHelper';
 import AddressBox from '../../../components/AddressBox';
-import Text from '../../../../reusecore/src/elements/Text';
+import Text from 'reusecore/src/elements/Text';
 import Icon from '../../../components/Icon';
-import Button from '../../../../reusecore/src/elements/Button';
+import Button from 'reusecore/src/elements/Button';
 import InfoBox from '../../../components/UserInfoBox';
 import ReadMore from '../../../components/Truncate';
 

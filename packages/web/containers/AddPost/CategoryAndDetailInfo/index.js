@@ -3,17 +3,17 @@ import Icon from 'react-icons-kit';
 import { archive } from 'react-icons-kit/ionicons/archive';
 import { chevronRight } from 'react-icons-kit/ionicons/chevronRight';
 import { uploadMultipleImages } from '../../../helpers/uploadMultipleImage';
-import Box from '../../../../reusecore/src/elements/Box';
-import Button from '../../../../reusecore/src/elements/Button';
+import Box from 'reusecore/src/elements/Box';
+import Button from 'reusecore/src/elements/Button';
 import { chevronLeft } from 'react-icons-kit/ionicons/chevronLeft';
-import Text from '../../../../reusecore/src/elements/Text';
+import Text from 'reusecore/src/elements/Text';
 import Input from '../../../components/Input';
-import { ADD_POST } from '../../../../core/graphql/Mutations';
+import { ADD_POST } from 'core/graphql/Mutations';
 import AsyncSelect from 'react-select/async';
 import { AddPostContext } from '../../../contexts/AddPostContext';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import AuthHelper from '../../../helpers/authHelper';
-import { GET_CATEGORIES_FOR_DROPDOWN } from '../../../../core/graphql/Category.query';
+import { GET_CATEGORIES_FOR_DROPDOWN } from 'core/graphql/Category.query';
 
 const colourStyles = {
   control: () => ({

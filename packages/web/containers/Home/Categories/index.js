@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { Row, Col } from 'react-styled-flexboxgrid';
-import { GET_CATEGORIES } from '../../../../core/graphql/Category.query';
-import { SINGLE_CATEGORY_PAGE } from '../../../../core/navigation/constant';
+import { GET_CATEGORIES } from 'core/graphql/Category.query';
+import { SINGLE_CATEGORY_PAGE } from 'core/navigation/constant';
 import { useQuery } from '@apollo/react-hooks';
 import CategoryLoader from '../../../components/Loader/CategoryLoader';
 import { CategoryGridCard as CategoryGridCardComp } from '../../../components/CategoryCard';
-import ListGridComp from '../../../../reusecore/src/elements/ListGrid';
+import ListGridComp from 'reusecore/src/elements/ListGrid';
 import NoItemFound from '../../../components/NoItemFound';
 import OnError from '../../../components/OnError';
 

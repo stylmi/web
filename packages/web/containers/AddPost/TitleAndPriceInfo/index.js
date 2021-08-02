@@ -4,13 +4,13 @@ import { uploadMultipleImages } from "../../../helpers/uploadMultipleImage";
 import Icon from "react-icons-kit";
 import { archive } from "react-icons-kit/ionicons/archive";
 import { chevronRight } from "react-icons-kit/ionicons/chevronRight";
-import Switch from "../../../../reusecore/src/elements/Switch";
-import Button from "../../../../reusecore/src/elements/Button";
-import Text from "../../../../reusecore/src/elements/Text";
-import Box from "../../../../reusecore/src/elements/Box";
+import Switch from "reusecore/src/elements/Switch";
+import Button from "reusecore/src/elements/Button";
+import Text from "reusecore/src/elements/Text";
+import Box from "reusecore/src/elements/Box";
 import Input from "../../../components/Input";
 import AuthHelper from "../../../helpers/authHelper";
-import { ADD_POST } from "../../../../core/graphql/Mutations";
+import { ADD_POST } from "core/graphql/Mutations";
 import { useMutation } from "@apollo/react-hooks";
 import { AddPostContext } from "../../../contexts/AddPostContext";
 

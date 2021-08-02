@@ -1,9 +1,7 @@
 const fs = require('fs');
 const YAML = require('js-yaml');
 const admin = require('firebase-admin');
-
-const serviceAccount = require('./headless-graphql-firebase-config');
-
+const serviceAccount = require('./headless-graphql-firebase-config.json');
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -23,8 +21,6 @@ if (dateArray) {
 if (geoArray) {
   geoArray = geoArray.split('=')[1].split(',');
 }
-console.log(serviceAccount) 
-console.log("dd") 
 
 // You should replace databaseURL with your own
 admin.initializeApp({

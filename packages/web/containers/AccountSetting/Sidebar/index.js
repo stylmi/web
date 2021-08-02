@@ -3,7 +3,7 @@ import Icon from 'react-icons-kit';
 import { androidLock } from 'react-icons-kit/ionicons/androidLock';
 import { iosArrowForward } from 'react-icons-kit/ionicons/iosArrowForward';
 import { iosTelephone } from 'react-icons-kit/ionicons/iosTelephone';
-import Box from '../../../../reusecore/src/elements/Box';
+import Box from 'reusecore/src/elements/Box';
 import ProfileSettingInfo from '../../../components/ProfileSettingInfo';
 
 export default ({ image, name, onToggleClick }) => (

@@ -3,13 +3,13 @@ import Link from 'next/link';
 import ListView from '../../../components/ListView';
 import { ListLoader } from '../../../components/Placeholder';
 import { useQuery } from '@apollo/react-hooks';
-import { GET_SEARCH_POST } from '../../../../core/graphql/Search.query';
+import { GET_SEARCH_POST } from 'core/graphql/Search.query';
 import { CURRENCY } from '../../../Config';
-import { SINGLE_POST_PAGE } from '../../../../core/navigation/constant';
+import { SINGLE_POST_PAGE } from 'core/navigation/constant';
 import { SearchContext } from '../../../contexts/SearchContext';
 import { getUrlToState, setStateToUrl } from '../../../helpers/urlHandler';
-import PlaceholderImg from '../../../../core/static/images/thumb-grid-placeholder.svg';
-import ListGrid from '../../../../reusecore/src/elements/ListGrid';
+import PlaceholderImg from 'core/static/images/thumb-grid-placeholder.svg';
+import ListGrid from 'reusecore/src/elements/ListGrid';
 import NoItemFound from '../../../components/NoItemFound';
 import OnError from '../../../components/OnError';
 

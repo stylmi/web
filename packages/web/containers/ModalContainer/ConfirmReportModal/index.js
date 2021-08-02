@@ -2,8 +2,8 @@ import React from 'react';
 import Icon from 'react-icons-kit';
 import { iosTrash } from 'react-icons-kit/ionicons/iosTrash';
 import { ReportModalWrapper, ButtonWrapper, IconWrapper } from './style';
-import Text from '../../../../reusecore/src/elements/Text';
-import Button from '../../../../reusecore/src/elements/Button';
+import Text from 'reusecore/src/elements/Text';
+import Button from 'reusecore/src/elements/Button';
 
 const ConfirmReportModal = ({
   data: { handleRemoveMobile, item, closeModal },

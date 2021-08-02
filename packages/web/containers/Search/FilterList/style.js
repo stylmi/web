@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { Col as Cols } from 'react-styled-flexboxgrid';
 import LocationSearchInput from '../../../components/InputGooglePlace';
-import RangeSliderStyle from '../../../../reusecore/src/elements/Range-with-RC-SLIDE';
-import SwitchStyle from '../../../../reusecore/src/elements/Switch';
+import RangeSliderStyle from 'reusecore/src/elements/Range-with-RC-SLIDE';
+import SwitchStyle from 'reusecore/src/elements/Switch';
 
 const Col = styled(Cols)`
   &.visible-lg {

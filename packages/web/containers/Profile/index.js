@@ -11,7 +11,7 @@ import {
 } from 'react-icons/io';
 import { ProfileAvatarLoader } from '../../components/Placeholder';
 import { useQuery } from '@apollo/react-hooks';
-import { GET_PROFILE_INFO } from '../../../core/graphql/Profile.query';
+import { GET_PROFILE_INFO } from 'core/graphql/Profile.query';
 
 import UserInformation from '../../components/UserInfoBox';
 import TabButtons from '../../components/TabView';

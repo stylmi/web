@@ -1,6 +1,6 @@
 import React from 'react';
 /** Main Modal Component */
-import Modal from '../../../core/components/Web/UI/Modal';
+import Modal from 'core/components/Web/UI/Modal';
 
 /** Modal Components */
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import Icon from 'react-icons-kit';
 import { androidClose } from 'react-icons-kit/ionicons/androidClose';
-import Button from '../../../../reusecore/src/elements/Button';
-import Heading from '../../../../reusecore/src/elements/Heading';
-import Box from '../../../../reusecore/src/elements/Box';
+import Button from 'reusecore/src/elements/Button';
+import Heading from 'reusecore/src/elements/Heading';
+import Box from 'reusecore/src/elements/Box';
 
 const TopToolBar = ({ onClose }) => (
   <>

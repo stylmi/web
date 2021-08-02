@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from '../../../reusecore/src/elements/Card';
-import Heading from '../../../reusecore/src/elements/Heading';
-import Text from '../../../reusecore/src/elements/Text';
-import PlaceholderImage from '../../../core/static/images/thumb-grid-placeholder.svg';
+import Card from 'reusecore/src/elements/Card';
+import Heading from 'reusecore/src/elements/Heading';
+import Text from 'reusecore/src/elements/Text';
+import PlaceholderImage from 'core/static/images/thumb-grid-placeholder.svg';
 import Img from 'react-image';
 const PostCard = ({
   imageSrc,

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Grid, Row, Col } from 'react-styled-flexboxgrid';
-import Box from '../../../reusecore/src/elements/Box';
-import Text from '../../../reusecore/src/elements/Text';
+import Box from 'reusecore/src/elements/Box';
+import Text from 'reusecore/src/elements/Text';
 import Description from './Description';
 import RelatedPost from './RelatedPost';
 

@@ -1,5 +1,5 @@
-import Card from '../../reusecore/src/elements/Card';
-import Box from '../../reusecore/src/elements/Box';
+import Card from 'reusecore/src/elements/Card';
+import Box from 'reusecore/src/elements/Box';
 import AuthHeader from '../components/AuthHeader';
 import MobileSignIn from '../containers/MobileSignIn/mobileSIgnIn';
 import IsAuthenticated from '../hoc/isAuthenticated';

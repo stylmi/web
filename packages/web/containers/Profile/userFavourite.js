@@ -4,11 +4,11 @@ import { PostLoader } from '../../components/Placeholder';
 import { Grid } from 'react-styled-flexboxgrid';
 import { SINGLE_POST_PAGE } from 'core/navigation/constant';
 import { useQuery } from '@apollo/react-hooks';
-import { GET_FAVOURITE_POST } from '../../../core/graphql/Profile.query';
+import { GET_FAVOURITE_POST } from 'core/graphql/Profile.query';
 import { CURRENCY } from '../../Config';
 import { withRouter } from 'next/router';
 import PostCard from '../../components/PostCard';
-import ListGrid from '../../../reusecore/src/elements/ListGrid';
+import ListGrid from 'reusecore/src/elements/ListGrid';
 import NoItemFound from '../../components/NoItemFound';
 import OnError from '../../components/OnError';
 

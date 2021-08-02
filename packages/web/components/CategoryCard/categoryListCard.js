@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Heading from '../../../reusecore/src/elements/Heading';
-import Text from '../../../reusecore/src/elements/Text';
-import Image from '../../../reusecore/src/elements/Image';
-import PlaceholderImage from '../../../core/static/images/categoryPlaceholder.svg';
+import Heading from 'reusecore/src/elements/Heading';
+import Text from 'reusecore/src/elements/Text';
+import Image from 'reusecore/src/elements/Image';
+import PlaceholderImage from 'core/static/images/categoryPlaceholder.svg';
 
 const GridWrapper = styled('div')`
   display: flex;

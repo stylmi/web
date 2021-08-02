@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import Button from '../../../reusecore/src/elements/Button';
+import Button from 'reusecore/src/elements/Button';
 import DropdownMenu from '../DropdownMenu';
 import Image from 'react-image';
 import { MenuWrapper, MenuItemWrapper } from './style';
-import profileImg from '../../../core/static/images/user-placeholder.svg';
+import profileImg from 'core/static/images/user-placeholder.svg';
 import {
   HOME_PAGE,
   SEARCH_PAGE,
@@ -15,7 +15,7 @@ import {
   SIGNIN_PAGE,
   ADD_POST,
   ACCOUNT_SETTING_PAGE,
-} from '../../../core/navigation/constant';
+} from 'core/navigation/constant';
 const imageStyle = { width: 40, height: 40, borderRadius: '50%' };
 
 const DROPDOWN_MENU_ITEMS = [

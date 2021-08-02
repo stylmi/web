@@ -2,15 +2,15 @@ import React, { useState, useContext, useEffect } from 'react';
 import { Row } from 'react-styled-flexboxgrid';
 import LocationSearchInput from '../../../components/InputGooglePlace/altered';
 import { RangeBoxWrapper, RangeSlider, Holder, Col } from './style';
-import Switch from '../../../../reusecore/src/elements/Switch';
+import Switch from 'reusecore/src/elements/Switch';
 import { SearchContext, initialState } from '../../../contexts/SearchContext';
 import {
   setStateToUrl,
   getUrlToState,
   clearUrl,
 } from '../../../helpers/urlHandler';
-import Button from '../../../../reusecore/src/elements/Button';
-import Text from '../../../../reusecore/src/elements/Text';
+import Button from 'reusecore/src/elements/Button';
+import Text from 'reusecore/src/elements/Text';
 import Input from '../../../components/Input';
 
 const FilterElements = props => {

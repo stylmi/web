@@ -3,7 +3,7 @@ import withLayout from '../../hoc/withLayout';
 import { Modal } from '@redq/reuse-modal';
 import PageMeta from '../../components/PageMeta';
 import { useQuery } from '@apollo/react-hooks';
-import { GET_POST } from '../../../core/graphql/Post.query';
+import { GET_POST } from 'core/graphql/Post.query';
 import { useRouter } from 'next/router';
 import { withApollo } from '../../helpers/apollo';
 export default withApollo(

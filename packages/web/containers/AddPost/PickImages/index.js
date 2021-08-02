@@ -3,11 +3,11 @@ import Dropzone from 'react-dropzone';
 import { useMutation } from '@apollo/react-hooks';
 
 import AuthHelper from '../../../helpers/authHelper';
-import { ADD_POST } from '../../../../core/graphql/Mutations';
-import Text from '../../../../reusecore/src/elements/Text';
-import Heading from '../../../../reusecore/src/elements/Heading';
-import Box from '../../../../reusecore/src/elements/Box';
-import Alert from '../../../../reusecore/src/elements/Alert';
+import { ADD_POST } from 'core/graphql/Mutations';
+import Text from 'reusecore/src/elements/Text';
+import Heading from 'reusecore/src/elements/Heading';
+import Box from 'reusecore/src/elements/Box';
+import Alert from 'reusecore/src/elements/Alert';
 import DropArea from '../../../components/DropArea';
 import { AddPostContext } from '../../../contexts/AddPostContext';
 import { uploadMultipleImages } from '../../../helpers/uploadMultipleImage';

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid } from 'react-styled-flexboxgrid';
 import styled from 'styled-components';
-import Box from '../../reusecore/src/elements/Box';
-import Card from '../../reusecore/src/elements/Card';
+import Box from 'reusecore/src/elements/Box';
+import Card from 'reusecore/src/elements/Card';
 import InfoBlocks from '../components/InfoBlock';
 import TextSearch from '../containers/Home/TextSearch';
 import RecentPost from '../containers/Home/RecentPost';
@@ -12,7 +12,7 @@ import withLayout from '../hoc/withLayout';
 import PageMeta from '../components/PageMeta';
 import { withApollo } from '../helpers/apollo';
 // Static Images
-import BannerImage from '../../core/static/images/banner.png';
+import BannerImage from 'core/static/images/banner.png';
 
 const InfoBlock = styled(InfoBlocks)`
   @media only screen and (max-width: 767px) {

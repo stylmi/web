@@ -1,10 +1,10 @@
 import React from 'react';
 import Logo from '../Logo';
-import Box from '../../../reusecore/src/elements/Box';
-import Heading from '../../../reusecore/src/elements/Heading';
-import Text from '../../../reusecore/src/elements/Text';
+import Box from 'reusecore/src/elements/Box';
+import Heading from 'reusecore/src/elements/Heading';
+import Text from 'reusecore/src/elements/Text';
 
-import logoImage from '../../../core/static/images/headless-logo.svg';
+import logoImage from 'core/static/images/headless-logo.svg';
 
 const AuthHeader = ({ image, title, description, ...props }) => (
   <Box {...props}>

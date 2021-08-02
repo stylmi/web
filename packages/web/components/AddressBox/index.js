@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { AddressBox, Address, Place, Location } from './style';
 import IconBox from '../ImageHolder/IconHolder';
-import LocationIcon from '../../../core/static/images/location.png';
+import LocationIcon from 'core/static/images/location.png';
 
 const AddressComp = ({ style, className, location, distance }) => {
   return (
