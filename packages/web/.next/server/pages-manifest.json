@@ -2,6 +2,6 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/category/[slug]": "pages/category/[slug].js",
-  "/post/[slug]": "pages/post/[slug].js"
+  "/account-settings": "pages/account-settings.js",
+  "/add-post/[id]": "pages/add-post/[id].js"
 }
