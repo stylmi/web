@@ -24,7 +24,7 @@ export default function TextSearch() {
         <InputSearch
           changed={onChange}
           value={searchValue}
-          placeholder="10,000 products available"
+          placeholder="10,000+ products available"
           buttonIcon={<IoIosSearch size={20} />}
           buttonText="Search"
           style={{

@@ -5,18 +5,18 @@ import { naviconRound } from 'react-icons-kit/ionicons/naviconRound';
 import { plusRound } from 'react-icons-kit/ionicons/plusRound';
 import { more } from 'react-icons-kit/ionicons/more';
 import { FullPageSpinner } from '../../components/Loader/spinnerLoader';
-import { LOGOUT } from '../../../core/graphql/Mutations';
-import { GET_AUTHOR_INFO } from '../../../core/graphql/Profile.query';
+import { LOGOUT } from 'core/graphql/Mutations';
+import { GET_AUTHOR_INFO } from 'core/graphql/Profile.query';
 import { useMutation, useQuery } from '@apollo/react-hooks';
 import AuthHelper from '../../helpers/authHelper';
 import { removeFirebaseCookie } from '../../helpers/session';
 import redirect from '../../helpers/redirect';
 import { androidClose } from 'react-icons-kit/ionicons/androidClose';
 import Icon from 'react-icons-kit';
-import Button from '../../../reusecore/src/elements/Button';
+import Button from 'reusecore/src/elements/Button';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import SideDrawer from '../../../reusecore/src/elements/Drawer';
+import SideDrawer from 'reusecore/src/elements/Drawer';
 import { setFirebaseCookie } from '../../helpers/session';
 import {
   HOME_PAGE,
@@ -34,7 +34,7 @@ import {
   RESET_PASSWORD_PAGE,
   ADD_POST,
   ACCOUNT_SETTING_PAGE,
-} from '../../../core/navigation/constant';
+} from 'core/navigation/constant';
 
 const Main = styled.main`
   min-height: 100vh;

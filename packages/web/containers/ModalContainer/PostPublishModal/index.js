@@ -4,9 +4,9 @@ import Link from 'next/link';
 import Icon from 'react-icons-kit';
 import { androidDone } from 'react-icons-kit/ionicons/androidDone';
 import { chevronRight } from 'react-icons-kit/ionicons/chevronRight';
-import { ADD_POST, SINGLE_POST_PAGE } from '../../../../core/navigation/constant';
-import Text from '../../../../reusecore/src/elements/Text';
-import Button from '../../../../reusecore/src/elements/Button';
+import { ADD_POST, SINGLE_POST_PAGE } from 'core/navigation/constant';
+import Text from 'reusecore/src/elements/Text';
+import Button from 'reusecore/src/elements/Button';
 
 import SuccessModalWrapper, { IconWrapper, ButtonWrapper } from './style';
 const PublishModal = ({ data: { slug, title, message } }) => {

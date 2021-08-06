@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import opps from '../../core/static/images/oops.svg';
+import opps from 'core/static/images/oops.svg';
 const StyledImage = styled.img`
   display: block;
   max-width: 100%;

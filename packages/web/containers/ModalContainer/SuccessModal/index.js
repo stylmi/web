@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from 'react-icons-kit';
 import { androidDone } from 'react-icons-kit/ionicons/androidDone';
-import Text from '../../../../reusecore/src/elements/Text';
+import Text from 'reusecore/src/elements/Text';
 
 import SuccessModalWrapper, { IconWrapper } from './style';
 const SuccessModal = props => (

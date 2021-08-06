@@ -1,11 +1,11 @@
 import React from 'react';
-import Button from '../../../reusecore/src/elements/Button';
+import Button from 'reusecore/src/elements/Button';
 import Logo from '../Logo';
 import Search from '../Search';
 import Menu from '../Menu';
 import { NavbarWrapper } from './style';
-import logoImg from '../../../core/static/images/headless-logo.svg';
-import { SEARCH_PAGE } from '../../../core/navigation/constant';
+import logoImg from 'core/static/images/headless-logo.svg';
+import { SEARCH_PAGE } from 'core/navigation/constant';
 
 const Navbar = ({
   onToggle,

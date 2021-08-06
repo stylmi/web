@@ -1,13 +1,13 @@
 import Router, { useRouter } from 'next/router';
 import { Grid, Row, Col } from 'react-styled-flexboxgrid';
-import Box from '../../reusecore/src/elements/Box';
+import Box from 'reusecore/src/elements/Box';
 import { useQuery } from '@apollo/react-hooks';
 import { Modal } from '@redq/reuse-modal';
 import SecretPage from '../hoc/secretPage';
 import withLayout from '../hoc/withLayout';
 import PageMeta from '../components/PageMeta';
 
-import { GET_AUTHOR } from '../../core/graphql/Author';
+import { GET_AUTHOR } from 'core/graphql/Author';
 
 import Sidebar from '../containers/AccountSetting/Sidebar';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Text from '../../../reusecore/src/elements/Text';
+import Text from 'reusecore/src/elements/Text';
 import {
   ListViewWrapper,
   ImageWrapper,

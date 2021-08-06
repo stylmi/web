@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Box from 'reusecore/src/elements/Box';
 import Image from 'react-image';
-import Text from '../../../reusecore/src/elements/Text';
+import Text from 'reusecore/src/elements/Text';
 
-import Avatar from '../../../core/static/images/user-placeholder.svg';
+import Avatar from 'core/static/images/user-placeholder.svg';
 
 const ImageStyle = {
   overflow: 'hidden',

@@ -2,11 +2,11 @@ import React, { Fragment, useState, useContext } from 'react';
 import { CategoryListCard } from '../../../components/CategoryCard';
 import { CategoryLoader } from '../../../components/Placeholder';
 import { useQuery } from '@apollo/react-hooks';
-import { GET_SEARCH_CATEGORY } from '../../../../core/graphql/Search.query';
+import { GET_SEARCH_CATEGORY } from 'core/graphql/Search.query';
 import { SearchContext } from '../../../contexts/SearchContext';
 import { addOrRemove, inArray } from '../../../helpers';
 import { setStateToUrl, getUrlToState } from '../../../helpers/urlHandler';
-import ListGrid from '../../../../reusecore/src/elements/ListGrid';
+import ListGrid from 'reusecore/src/elements/ListGrid';
 import OnError from '../../../components/OnError';
 
 function SearchCategory() {

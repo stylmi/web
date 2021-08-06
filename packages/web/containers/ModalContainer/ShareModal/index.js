@@ -6,7 +6,7 @@ import {
   CopyButton,
   Notify,
 } from './style';
-import Text from '../../../../reusecore/src/elements/Text';
+import Text from 'reusecore/src/elements/Text';
 
 import SocialShare from '../../../components/SocialShare';
 import { CopyToClipboard } from 'react-copy-to-clipboard';

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import * as Yup from 'yup';
 import Input from '../../../components/Input';
-import Heading from '../../../../reusecore/src/elements/Heading';
-import Button from '../../../../reusecore/src/elements/Button';
+import Heading from 'reusecore/src/elements/Heading';
+import Button from 'reusecore/src/elements/Button';
 import { withFormik } from 'formik';
 import AuthHelper from '../../../helpers/authHelper';
-import Box from '../../../../reusecore/src/elements/Box';
+import Box from 'reusecore/src/elements/Box';
 import { FormGroup, ErrorNotification } from '../../SignInForm/style';
 
 const ResetPassEnhancer = withFormik({

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Grid } from 'react-styled-flexboxgrid';
+import Button from 'reusecore/src/elements/Button';
 import styled from 'styled-components';
-import Box from '../../reusecore/src/elements/Box';
-import Card from '../../reusecore/src/elements/Card';
+import Box from 'reusecore/src/elements/Box';
+import Card from 'reusecore/src/elements/Card';
 import InfoBlocks from '../components/InfoBlock';
 import TextSearch from '../containers/Home/TextSearch';
 import RecentPost from '../containers/Home/RecentPost';
@@ -11,8 +12,10 @@ import CategoryPost from '../containers/Home/Categories';
 import withLayout from '../hoc/withLayout';
 import PageMeta from '../components/PageMeta';
 import { withApollo } from '../helpers/apollo';
+import {IoLocationSharp} from "react-icons/io5"
 // Static Images
-import BannerImage from '../../core/static/images/banner.png';
+import BannerImage from 'core/static/images/banner.png';
+import {Text, Box as ChakraBox, Button as ChakraButton} from '@chakra-ui/react';
 
 const InfoBlock = styled(InfoBlocks)`
   @media only screen and (max-width: 767px) {
@@ -40,7 +43,7 @@ export default withApollo(
     return (
       <>
         <PageMeta
-          title="Headless GraphQL"
+          title="Sell It"
           description="Place where you can buy &amp; sell products"
         />
         <Card as="section" {...bannerStyle}>
@@ -52,7 +55,23 @@ export default withApollo(
               textAlign="center"
               style={{ paddingLeft: '2rem', paddingRight: '2rem' }}
             />
+            <ChakraBox d="flex" flexDirection="row" justifyContent="center" alignItems="center">
+            <Text color="primary" fontSize={["1.2rem"]} px="1%">
+              Search Products in 
+            </Text>
+            <Button
+              title="All Rwanda"
+              icon={<IoLocationSharp/>}
+              iconPosition="left"
+              bg="solid"
+              color="white"
+              border="1px solid #30C56D"
+            />
+             
+            </ChakraBox>
+  
             <TextSearch />
+
             <CategoryPost />
           </Grid>
         </Card>

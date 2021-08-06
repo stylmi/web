@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import firebase from 'firebase';
 import { withFormik } from 'formik';
-import Button from '../../../../reusecore/src/elements/Button';
+import Button from 'reusecore/src/elements/Button';
 import { ErrorNotification } from '../SignInForm/style';
 import Input from '../../components/Input';
 import { setFirebaseCookie } from '../../helpers/session';
 import redirect from '../../helpers/redirect';
 import { useMutation } from '@apollo/react-hooks';
-import { REGISTER } from '../../../../core/graphql/Mutations';
+import { REGISTER } from 'core/graphql/Mutations';
 import {
   GET_VERIFICATION_CODE,
   VERIFY_CODE,

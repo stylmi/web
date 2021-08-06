@@ -8,11 +8,11 @@ import {
 	closeCircled,
 	androidClose,
 } from "react-icons-kit/ionicons";
-import UpIcon from "../../../../core/static/images/UploadIcon.png";
+import UpIcon from "core/static/images/UploadIcon.png";
 import { AddPostContext } from "../../../contexts/AddPostContext";
 
-import Box from "../../../../reusecore/src/elements/Box";
-import Image from "../../../../reusecore/src/elements/Image";
+import Box from "reusecore/src/elements/Box";
+import Image from "reusecore/src/elements/Image";
 
 const UpButton = styled("button")`
 	width: 75px;

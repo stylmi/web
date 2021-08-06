@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { withFormik } from 'formik';
 import Input from '../../../components/Input';
-import Heading from '../../../../reusecore/src/elements/Heading';
-import Button from '../../../../reusecore/src/elements/Button';
+import Heading from 'reusecore/src/elements/Heading';
+import Button from 'reusecore/src/elements/Button';
 import ChangeProfilePicture from './UploadImage';
 import { openModal } from '@redq/reuse-modal';
 import SuccessModal from '../../../containers/ModalContainer/SuccessModal';
-import Alert from '../../../../reusecore/src/elements/Alert';
+import Alert from 'reusecore/src/elements/Alert';
 
 import { uploadMultipleImages } from '../../../helpers/uploadMultipleImage';
 import { useMutation } from '@apollo/react-hooks';

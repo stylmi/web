@@ -3,8 +3,8 @@ import { Grid, Row, Col } from 'react-styled-flexboxgrid';
 import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/react-hooks';
 import { Modal } from '@redq/reuse-modal';
-import { GET_POST_FOR_EDIT } from '../../../core/graphql/Post.query';
-import Alert from '../../../reusecore/src/elements/Alert';
+import { GET_POST_FOR_EDIT } from 'core/graphql/Post.query';
+import Alert from 'reusecore/src/elements/Alert';
 import SecretPage from '../../hoc/secretPage';
 import withLayout from '../../hoc/withLayout';
 import {

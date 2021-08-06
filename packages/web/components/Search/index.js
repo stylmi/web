@@ -3,7 +3,7 @@ import InputSearch from "../InputSearch";
 import SearchWrapper, { SearchBox } from "./Search.style";
 import Icon from "react-icons-kit";
 import { androidSearch } from "react-icons-kit/ionicons/androidSearch";
-import Button from "../../../reusecore/src/elements/Button";
+import Button from "reusecore/src/elements/Button";
 
 export default function Search() {
 	const [searchValue, setSearchValue] = useState("");

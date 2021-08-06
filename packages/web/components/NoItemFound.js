@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import noresult from '../../core/static/images/no-result.svg';
+import noresult from 'core/static/images/no-result.svg';
 const StyledImage = styled.img`
   display: block;
   max-width: 100%;

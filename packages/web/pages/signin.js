@@ -1,5 +1,5 @@
-import Card from '../../reusecore/src/elements/Card';
-import Box from '../../reusecore/src/elements/Box';
+import Card from 'reusecore/src/elements/Card';
+import Box from 'reusecore/src/elements/Box';
 import SignInForm from '../containers/SignInForm';
 import IsAuthenticated from '../hoc/isAuthenticated';
 import PageMeta from '../components/PageMeta';

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Images, ImageHolder } from './imageHolder.style';
-import BannerImg from '../../../core/static/images/single-post-img.png';
+import BannerImg from 'core/static/images/single-post-img.png';
 const ImageBox = ({
   imgWidth,
   imgHeight,

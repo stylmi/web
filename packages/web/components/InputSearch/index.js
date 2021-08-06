@@ -1,7 +1,7 @@
 import React from 'react';
 import Router from 'next/router';
 import { SearchInputWrapper, SearchInput, SearchButton } from './style';
-import { SEARCH_PAGE } from '../../../core/navigation/constant';
+import { SEARCH_PAGE } from 'core/navigation/constant';
 const InputSearch = ({
   type,
   value,

@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
-import Button from '../../../reusecore/src/elements/Button';
-import DropdownMenu from '../DropdownMenu';
-import Image from 'react-image';
-import { MenuWrapper, MenuItemWrapper } from './style';
-import profileImg from '../../../core/static/images/user-placeholder.svg';
+import React from "react";
+import Link from "next/link";
+import Button from "reusecore/src/elements/Button";
+import DropdownMenu from "../DropdownMenu";
+import Image from "react-image";
+import { MenuWrapper, MenuItemWrapper } from "./style";
+import profileImg from "core/static/images/user-placeholder.svg";
 import {
   HOME_PAGE,
   SEARCH_PAGE,
@@ -15,8 +15,8 @@ import {
   SIGNIN_PAGE,
   ADD_POST,
   ACCOUNT_SETTING_PAGE,
-} from '../../../core/navigation/constant';
-const imageStyle = { width: 40, height: 40, borderRadius: '50%' };
+} from "core/navigation/constant";
+const imageStyle = { width: 40, height: 40, borderRadius: "50%" };
 
 const DROPDOWN_MENU_ITEMS = [
   <Link href={SEARCH_PAGE}>
@@ -56,18 +56,18 @@ const Menu = ({
       width={1}
       color="#EF5A5A"
       style={{
-        minHeight: 'auto',
-        minWidth: 'auto',
-        textDecoration: 'none',
-        justifyContent: 'flex-start',
-        marginLeft: '-4px',
+        minHeight: "auto",
+        minWidth: "auto",
+        textDecoration: "none",
+        justifyContent: "flex-start",
+        marginLeft: "-4px",
       }}
     />,
   ];
 
   return (
     <MenuWrapper className={className}>
-      <MenuItemWrapper>
+      {/* <MenuItemWrapper>
         <Link href={HOME_PAGE}>
           <a> Home </a>
         </Link>
@@ -78,26 +78,12 @@ const Menu = ({
           dropdownDirection="right"
           dropdownItems={DROPDOWN_MENU_ITEMS}
         />
-      </MenuItemWrapper>
-      <MenuItemWrapper>
-        <Link href={`${ADD_POST}/[id]`} as={`${ADD_POST}/new`}>
-          <a>
-            <Button
-              title="Add Post"
-              icon={buttonIcon}
-              iconPosition="left"
-              bg="transparent"
-              color="#30C56D"
-              border="1px solid #30C56D"
-            />
-          </a>
-        </Link>
-      </MenuItemWrapper>
+      </MenuItemWrapper> */}
       {!isLoggedIn ? (
         <MenuItemWrapper paddingX="0">
           <Link href={SIGNIN_PAGE}>
             <a>
-              <Button title="Join Us" />
+              <Button title="Join Us" color="#30C56D" bg="transparent" border="1px solid #30C56D" />
             </a>
           </Link>
         </MenuItemWrapper>
@@ -129,6 +115,19 @@ const Menu = ({
           />
         </MenuItemWrapper>
       )}
+      <MenuItemWrapper>
+        <Link href={`${ADD_POST}/[id]`} as={`${ADD_POST}/new`}>
+          <a>
+            <Button
+              title="Sell"
+              iconPosition="left"
+              bg="solid"
+              color="white"
+              border="1px solid #30C56D"
+            />
+          </a>
+        </Link>
+      </MenuItemWrapper>
     </MenuWrapper>
   );
 };

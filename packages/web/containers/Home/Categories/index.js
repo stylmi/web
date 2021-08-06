@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { Row, Col } from 'react-styled-flexboxgrid';
-import { GET_CATEGORIES } from '../../../../core/graphql/Category.query';
-import { SINGLE_CATEGORY_PAGE } from '../../../../core/navigation/constant';
+import { GET_CATEGORIES } from 'core/graphql/Category.query';
+import { SINGLE_CATEGORY_PAGE } from 'core/navigation/constant';
 import { useQuery } from '@apollo/react-hooks';
 import CategoryLoader from '../../../components/Loader/CategoryLoader';
 import { CategoryGridCard as CategoryGridCardComp } from '../../../components/CategoryCard';
-import ListGridComp from '../../../../reusecore/src/elements/ListGrid';
+import ListGridComp from 'reusecore/src/elements/ListGrid';
 import NoItemFound from '../../../components/NoItemFound';
 import OnError from '../../../components/OnError';
 
@@ -32,7 +32,7 @@ const ListGrid = styled(ListGridComp)`
 `;
 
 const CategoryGridCard = styled(CategoryGridCardComp)`
-  height: 100%;
+  height: 50%;
 
   @media only screen and (max-width: 767px) {
     background-color: transparent;
@@ -83,10 +83,11 @@ export default function CategoryPost() {
       <Col xs={12} mdOffset={3} smOffset={2} sm={8}>
         {!categories ? (
           <NoItemFound />
-        ) : (
+        ) : 
+        (
           <ListGrid
             data={categories}
-            columnWidth={[1, 1 / 2, 1 / 3, 1 / 4]}
+            columnWidth={[1/2, 1 / 4, 1 / 6, 1 / 8]}
             component={renderCategoryItem}
             loading={loading}
             placeholder={<CategoryLoader />}
@@ -99,7 +100,8 @@ export default function CategoryPost() {
               flexWrap: 'wrap',
             }}
           />
-        )}
+        )
+        }
       </Col>
     </Row>
   );

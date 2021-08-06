@@ -1,6 +1,6 @@
 import React from 'react';
-import Box from '../../../../reusecore/src/elements/Box';
-import Text from '../../../../reusecore/src/elements/Text';
+import Box from 'reusecore/src/elements/Box';
+import Text from 'reusecore/src/elements/Text';
 
 const ContactInfoModal = props => {
   return (

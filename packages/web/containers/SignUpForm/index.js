@@ -6,13 +6,13 @@ import Icon from 'react-icons-kit';
 import { locked } from 'react-icons-kit/iconic/locked';
 import { phone } from 'react-icons-kit/iconic/phone';
 
-import Text from '../../../../reusecore/src/elements/Text';
-import Button from '../../../../reusecore/src/elements/Button';
+import Text from 'reusecore/src/elements/Text';
+import Button from 'reusecore/src/elements/Button';
 import AuthHeader from '../../components/AuthHeader';
 import Input from '../../components/Input';
-import Box from '../../../../reusecore/src/elements/Box';
+import Box from 'reusecore/src/elements/Box';
 import { FormGroup, ErrorNotification } from '../SignInForm/style';
-import { REGISTER } from '../../../../core/graphql/Mutations';
+import { REGISTER } from 'core/graphql/Mutations';
 import { useMutation } from '@apollo/react-hooks';
 import AuthHelper from '../../helpers/authHelper';
 import { setFirebaseCookie } from '../../helpers/session';
