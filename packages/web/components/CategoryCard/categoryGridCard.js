@@ -44,7 +44,7 @@ CategoryGridCard.defaultProps = {
   boxShadow: 'none',
   p: '40px 32px',
   titleStyle: {
-    fontSize: '15px',
+    fontSize: '10px',
     fontWeight: 'normal',
     mb: '0',
     textAlign: 'center',
@@ -53,8 +53,8 @@ CategoryGridCard.defaultProps = {
   imageStyle: {
     borderRadius: '100%',
     objectFit: 'cover',
-    height: '60px',
-    width: '60px',
+    height: '50px',
+    width: '50px',
     margin: 'auto',
     overflow: 'hidden',
   },
