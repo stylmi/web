@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn upgrade react-icons
+  /usr/local/bin/node /usr/local/bin/yarn add body-scroll-lock
 
 PATH: 
   /opt/homebrew/opt/openjdk/bin:/opt/homebrew/Caskroom/miniconda/base/bin:/opt/homebrew/Caskroom/miniconda/base/condabin:/opt/homebrew/opt/openjdk/bin:/Users/mrcea/.dotnet/tools:/usr/local/share/dotnet:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Users/mrcea/dotnet:/Users/mrcea/.dotnet/tools:/usr/local/share/dotnet:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools
@@ -92,7 +92,7 @@ npm manifest:
   		"react-dropzone": "^10.1.7",
   		"react-fast-compare": "^2.0.4",
   		"react-google-maps": "^9.4.5",
-  		"react-icons": "^3.7.0",
+  		"react-icons": "^4.2.0",
   		"react-image": "^2.2.0",
   		"react-places-autocomplete": "^7.2.1",
   		"react-portal-universal": "^0.1.2",
@@ -20369,6 +20369,11 @@ Lockfile:
     integrity sha512-7MyPwjIhuyW0D2N3s4DEd0hGPGFf0sK+IIRKhc1FvSpZNVmnUoGvHbmAwzGJU+3my+fvihVWgwU5SDtlAri56Q==
     dependencies:
       camelcase "^5.0.0"
+  
+  react-icons@^4.2.0:
+    version "4.2.0"
+    resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"
+    integrity sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ==
   
   react-image@^2.2.0:
     version "2.2.0"

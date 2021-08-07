@@ -53,8 +53,8 @@ CategoryGridCard.defaultProps = {
   imageStyle: {
     borderRadius: '100%',
     objectFit: 'cover',
-    height: '50px',
-    width: '50px',
+    height: '2.5em',
+    width: '2.5em',
     margin: 'auto',
     overflow: 'hidden',
   },

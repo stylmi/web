@@ -87,7 +87,7 @@ export default function CategoryPost() {
         (
           <ListGrid
             data={categories}
-            columnWidth={[1/2, 1 / 4, 1 / 6, 1 / 8]}
+            columnWidth={[1, 1 / 2, 1 / 4, 1 / 6]}
             component={renderCategoryItem}
             loading={loading}
             placeholder={<CategoryLoader />}
