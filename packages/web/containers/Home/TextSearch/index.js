@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import { IoIosSearch } from 'react-icons/io';
-
+import { SEARCH_PAGE } from 'core/navigation/constant';
 import InputSearch from '../../../components/InputSearch';
 
 export default function TextSearch() {
@@ -24,9 +24,11 @@ export default function TextSearch() {
         <InputSearch
           changed={onChange}
           value={searchValue}
+          pageToFilter={SEARCH_PAGE}
           placeholder="10,000+ products available"
           buttonIcon={<IoIosSearch size={20} />}
           buttonText="Search"
+          addSubmit={true}
           style={{
             boxShadow: '0 0 10px rgba(0,0,0,0.1)',
             marginTop: 50,

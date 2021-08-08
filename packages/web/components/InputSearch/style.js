@@ -29,22 +29,26 @@ export const SearchInput = styled.input`
   }
 
   &::-webkit-input-placeholder {
-    font-size: 16px;
+    font-size: 1em;
     color: #8c8c8c;
+    text-align:${props => props.placeholderAlign || "left"};
   }
 
   &:-moz-placeholder {
-    font-size: 16px;
+    font-size: 1em;
     color: #8c8c8c;
+    text-align:${props => props.placeholderAlign || "left"};
   }
 
   &::-moz-placeholder {
-    font-size: 16px;
+    font-size: 1em;
     color: #8c8c8c;
+    text-align:${props => props.placeholderAlign || "left"};
   }
   &:-ms-input-placeholder {
-    font-size: 16px;
+    font-size: 1em;
     color: #8c8c8c;
+    text-align:${props => props.placeholderAlign || "left"};
   }
 `;
 
