@@ -30,6 +30,7 @@ export const GET_SEARCH_POST = gql`
           lat
           lng
           formattedAddress
+          locationCategory
         }
         distance
         createdAt

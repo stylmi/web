@@ -30,6 +30,7 @@ const NearestPost = ({ location }) => {
   // Extract Post Data
   const nearestPost = data && data.nearest ? data.nearest.data : [];
 
+
   // Post Loop Control Area
   const renderNearestPost = item => {
     const {

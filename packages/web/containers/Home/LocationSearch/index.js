@@ -1,14 +1,15 @@
-import React, {useState} from "react";
+import React, {useContext} from "react";
 import {IoLocationSharp} from "react-icons/io5";
 import {Text, Box as ChakraBox} from '@chakra-ui/react';
 import Button from 'reusecore/src/elements/Button';
 import LocationModal from "../../../components/LocationModal";
 import {useDisclosure} from "@chakra-ui/react"
-import { cli } from "winston/lib/winston/config";
+import { LocationContext,ScrollContext } from "../../../contexts/HomepageContext";
 
-const LocationSearch = ({enableScroll, setScroll}) => {
+const LocationSearch = () => {
+  const {setScroll, enableScroll} = useContext(ScrollContext)
+  const {location} = useContext(LocationContext)
   const {isOpen, onOpen, onClose} = useDisclosure()
-  const [text, setText] = useState("All Rwanda")
     return (
        
         <ChakraBox d="flex" flexDirection="row" justifyContent="center" alignItems="center">
@@ -16,15 +17,15 @@ const LocationSearch = ({enableScroll, setScroll}) => {
           Search Products in 
         </Text>
         <Button
-          title={text}
+          title={location}
           icon={<IoLocationSharp/>}
           iconPosition="left"
           bg="solid"
           color="white"
           border="1px solid #30C56D"
-          onClick = {() => {onOpen(), setScroll(!enableScroll)}}
+          onClick = {() => {onOpen(), setScroll(enableScroll)}}
         />
-        <LocationModal close={onClose} open={isOpen} setScroll={setScroll} enableScroll={enableScroll} setText={setText} />
+        <LocationModal close={onClose} open={isOpen}/>
         </ChakraBox>
 
     )

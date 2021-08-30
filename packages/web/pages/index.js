@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, { useRef, useState, createContext } from "react";
 import { Grid } from "react-styled-flexboxgrid";
 import styled from "styled-components";
 import Box from "reusecore/src/elements/Box";
@@ -7,17 +7,17 @@ import InfoBlocks from "../components/InfoBlock";
 import TextSearch from "../containers/Home/TextSearch";
 import RecentPost from "../containers/Home/RecentPost";
 import NearestPost from "../containers/Home/NearestPost";
+import PostByLocation from "../containers/Home/PostByLocation";
 import CategoryPost from "../containers/Home/Categories";
 import withLayout from "../hoc/withLayout";
 import PageMeta from "../components/PageMeta";
 import { withApollo } from "../helpers/apollo";
-import LocationSearch from "../containers/Home/LocationSearch"
+import LocationSearch from "../containers/Home/LocationSearch";
+import { LocationContext, ScrollContext } from "../contexts/HomepageContext";
 
 // Static Images
 import BannerImage from "core/static/images/banner.png";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-
-
 
 const InfoBlock = styled(InfoBlocks)`
   @media only screen and (max-width: 767px) {
@@ -42,40 +42,78 @@ const bannerStyle = {
 
 export default withApollo(
   withLayout(({ location, ...props }) => {
-    const bodyRef = useRef(null)
-    const [enableScroll, setEnableScroll] = useState(true)
-    enableScroll? enableBodyScroll(bodyRef.current): disableBodyScroll(bodyRef.current)
+    const bodyRef = useRef("home");
+    const [enableScroll, setEnableScroll] = useState(true);
+    const [searchLocation, setSearchLocation] = useState("All Rwanda");
+
+    enableScroll
+      ? enableBodyScroll(bodyRef.current)
+      : disableBodyScroll(bodyRef.current);
     return (
       <div ref={bodyRef}>
         <PageMeta
           title="Sell It"
-          description="Place where you can buy &amp; sell products"
+          description="Place where you can buy, sell &amp; donate products"
         />
-      <Card as="section" {...bannerStyle}>
+        <Card as="section" {...bannerStyle}>
           <Grid style={{ padding: 0 }}>
             <InfoBlock
               className="banner-infoblock"
-              title="A Community of Buy &amp; Sell"
-              description="Buy and sell everything from used cars to mobile phones and computers, or search for property, jobs and more around the world. Easily post your Ad and share the Ad in any social media. 🎁"
+              title="A Community of Buy, Sell &amp; Donate"
+              description="Buy and sell everything from used cars to mobile phones and computers, or search for property, skillsets, jobs, charities and more around Rwanda. Easily post your Ad and share the Ad in any social media. 🎁"
               textAlign="center"
               style={{ paddingLeft: "2rem", paddingRight: "2rem" }}
             />
-            <LocationSearch enableScroll={enableScroll} setScroll = {setEnableScroll}/>
+            <LocationContext.Provider
+              value={{
+                location: searchLocation,
+                changeLocation: (value) => setSearchLocation(value),
+              }}
+            >
+              <ScrollContext.Provider
+                value={{
+                  enableScroll: true,
+                  setScroll: () => setEnableScroll(!enableScroll),
+                }}
+              >
+                <LocationSearch />
+              </ScrollContext.Provider>
+            </LocationContext.Provider>
+
             <TextSearch />
             <CategoryPost />
           </Grid>
         </Card>
-        <Box as="section" pt={60} pb={0}>
-          <Grid>
-            <RecentPost />
-          </Grid>
-        </Box>
+        {searchLocation === "All Rwanda" && (
+          <Box as="section" pt={60} pb={0}>
+            <Grid>
+              <RecentPost />
+            </Grid>
+          </Box>
+        )}
 
-        <Box as="section" pt={60} pb={40}>
-          <Grid>
-            <NearestPost location={location} />
-          </Grid>
-        </Box>
+        {searchLocation === "All Rwanda" && (
+          <Box as="section" pt={60} pb={40}>
+            <Grid>
+              <NearestPost location={location} />
+            </Grid>
+          </Box>
+        )}
+
+        {searchLocation !== "All Rwanda" && (
+          <Box as="section" pt={60} pb={40}>
+            <Grid>
+            <LocationContext.Provider
+              value={{
+                location: searchLocation,
+                changeLocation: (value) => setSearchLocation(value),
+              }}
+            >
+              <PostByLocation getLocation={location} />
+              </LocationContext.Provider>
+            </Grid>
+          </Box>
+        )}
       </div>
     );
   })

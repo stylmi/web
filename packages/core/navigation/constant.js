@@ -2,6 +2,7 @@ export const HOME_PAGE = '/';
 export const HOME_VIEW_PAGE = 'home';
 export const SEARCH_PAGE = '/search';
 export const NEAREST_POST_PAGE = '/nearest-posts';
+export const LOCATION_POST_PAGE = '/location-posts';
 export const RECENT_POST_PAGE = '/recent-posts';
 export const FAVOURITE_PAGE = '/favourites';
 

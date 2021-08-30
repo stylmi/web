@@ -13,21 +13,28 @@ const Query = {
   posts: (_, args) =>
     post.allPost({ limit: args.limit, page: args.page, status: args.status }),
   searchPosts: async (_, args) => {
-    const data = await post.search({ data: args.searchParams });
-    return data;
+    return post.search({ data: args.searchParams });
+  },
+  locationPost: async(_, args) => {
+    return post.byLocation({
+      limit: args.limit,
+      page: args.page,
+      location: args.location
+    })
   },
   nearest: async (_, args) => {
+    console.log(args)
     const radius = args.radius ? args.radius : 5000;
     const location = args.location
       ? args.location
       : { lat: 40.706877, lng: -74.011265 };
-    const data = await post.nearest({
+    return post.nearest({
       limit: args.limit,
       page: args.page,
       radius,
       location,
     });
-    return data;
+
   },
   post: async (_, args) => {
     if (args.slug) {

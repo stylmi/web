@@ -133,6 +133,17 @@ class Post extends Base {
    * The full search functionality
    * @param {Object} query
    */
+  async byLocation(query={}){
+    const { location } = query;
+    const limit = query.limit ? query.limit : 1000;
+    const page = query.page ? query.page : 1;
+    const collection = await this.getRef(this.collection).where("formattedLocation.locationCategory", "==", location).get();
+    console.log("collection", collection)
+    const nearest = await pagination(collection, page, limit);
+    console.log("here", nearest)
+    return nearest
+  }
+  
   async search(query = {}) {
     let searched = false;
     const category = new Category();
@@ -278,6 +289,7 @@ class Post extends Base {
     };
     return filterdData;
   }
+
 }
 
 export default Post;

@@ -59,8 +59,11 @@ export const typeDefs = `
   type Location {
     lat: Float
     lng: Float
-    formattedAddress: String
+    formattedAddress: String,
+    locationCategory: String
   }
+ 
+
   type Image {
     url: String
     largeUrl: String
@@ -79,6 +82,7 @@ export const typeDefs = `
     data: [Author]
     total: Int
   }
+
 
   input inputMobile {
     number: String
@@ -196,6 +200,7 @@ export const typeDefs = `
 
   type Query {
     posts(limit: Int, page: Int, status: String): PostWithTotal
+    locationPost(limit:Int, page: Int, location: String): PostWithTotal
     nearest(limit: Int, page: Int, location: locationInput): PostWithTotal
     searchPosts(searchParams: searchParams): PostWithTotal
     post(id: ID, slug: String, lat: Float, lng: Float): Post

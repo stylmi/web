@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
   Modal,
   ModalOverlay,
@@ -14,11 +14,15 @@ import InputSearch from "../InputSearch";
 import ModalSection from "./modalSection";
 import Places from "./placeInKigali.json";
 import { IoMdArrowDropleft } from "react-icons/io";
+import  uuid  from "react-uuid";
+import { LocationContext, ScrollContext } from "../../contexts/HomepageContext";
 
-const LocationModal = ({ open, close, setScroll, enableScroll, setText }) => {
+const LocationModal = ({ open, close }) => {
   const [searchValue, setSearchValue] = useState("");
   const [places, setPlaces] = useState([]);
   const [type, setType] = useState("districts");
+  const {changeLocation} = useContext(LocationContext)
+  const{enableScroll, setScroll} = useContext(ScrollContext)
 
   useEffect(() => {
     setContent(Object.keys(Places), "districts");
@@ -26,16 +30,18 @@ const LocationModal = ({ open, close, setScroll, enableScroll, setText }) => {
   const onChange = (e) => {
     setSearchValue(e.target.value);
   };
-  const setContent = (places, type) => {
-    if (typeof places === "string") {
+  const setContent = (place, types) => {
+    if (typeof place === "string") {
       setType("");
-      setText(places);
+      changeLocation(place);
       close();
+      setScroll(true);
+
     } else {
-      places = places.sort();
+      place = place.sort();
       let lowerLimit, middleLimit;
-      const remainder = places.length % 3;
-      const value = places.length / 3;
+      const remainder = place.length % 3;
+      const value = place.length / 3;
       if (remainder === 1) {
         lowerLimit = value * 1 + 1;
         middleLimit = lowerLimit + 3;
@@ -48,11 +54,11 @@ const LocationModal = ({ open, close, setScroll, enableScroll, setText }) => {
       }
 
       setPlaces([
-        places.slice(0, lowerLimit),
-        places.slice(lowerLimit, middleLimit),
-        places.slice(middleLimit),
+        place.slice(0, lowerLimit),
+        place.slice(lowerLimit, middleLimit),
+        place.slice(middleLimit),
       ]);
-      setType(type);
+      setType(types);
     }
   };
 
@@ -60,7 +66,7 @@ const LocationModal = ({ open, close, setScroll, enableScroll, setText }) => {
     <Modal
       isOpen={open}
       onClose={() => {
-        close(), setScroll(!enableScroll);
+        close(), setScroll(!enableScroll) ;
       }}
       motionPreset="slideInRight"
       autofocus={true}
@@ -117,10 +123,10 @@ const LocationModal = ({ open, close, setScroll, enableScroll, setText }) => {
             {places &&
               places.map((placeColumn) => {
                 return (
-                  <Flex direction="column" width="30%">
+                  <Flex key={uuid()} direction="column" width="30%">
                     {placeColumn.map((place) => {
                       return (
-                        <Box key={place} width="100%">
+                        <Box key={uuid()} width="100%">
                           <ModalSection
                             text={place}
                             type={type}

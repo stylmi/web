@@ -10,15 +10,20 @@ import LocationWrapper, { SearchResultWrapper } from './style';
 const LocationSearchInput = props => {
   const handleSelect = selected => {
     const address = selected;
+    let locationCategory;
     props.handleAddress(address);
     geocodeByAddress(selected)
-      .then(results => getLatLng(results[0]))
-      .then(latLng => props.handleLocation(latLng, address))
+     .then(values => console.log(values))
+      .then(results => {
+        locationCategory = results[0].address_components[3]
+        return getLatLng(results[0])
+      })
+      .then(latLng => props.handleLocation(latLng, address, locationCategory))
       .catch(error => console.error('Error', error));
   };
 
   const handleCloseClick = () => {
-    setAddressState({ ...addressState, address: '' });
+    setAddressState({ ...addressState, address: '',locationCategory:"" });
   };
 
   return (

@@ -35,6 +35,7 @@ export const GET_POST = gql`
         lat
         lng
         formattedAddress
+        locationCategory
       }
       categories {
         id
@@ -55,8 +56,26 @@ export const GET_POST = gql`
   }
 `;
 
+export const GET_POST_BY_LOCATION = gql`
+  query getPostsByLocation($LIMIT: Int, $page: Int, $location: String) {
+    locationPost(limit: $LIMIT,page: $page, location: $location) {
+      data {
+        id
+        slug
+        title
+        price
+        image {
+          url
+          largeUrl
+        }
+      }
+      total
+    }
+  }
+`;
+
 export const GET_POST_FOR_EDIT = gql`
-  query getPost($id: ID!) {
+  query get($id: ID!) {
     post(id: $id) {
       id
       title
@@ -80,6 +99,7 @@ export const GET_POST_FOR_EDIT = gql`
         lat
         lng
         formattedAddress
+        locationCategory
       }
       categories {
         id
