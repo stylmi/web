@@ -138,10 +138,8 @@ class Post extends Base {
     const limit = query.limit ? query.limit : 1000;
     const page = query.page ? query.page : 1;
     const collection = await this.getRef(this.collection).where("formattedLocation.locationCategory", "==", location).get();
-    console.log("collection", collection)
-    const nearest = await pagination(collection, page, limit);
-    console.log("here", nearest)
-    return nearest
+    const locationPosts = await pagination(collection, page, limit);
+    return locationPosts
   }
   
   async search(query = {}) {

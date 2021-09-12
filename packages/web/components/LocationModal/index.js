@@ -14,6 +14,8 @@ import InputSearch from "../InputSearch";
 import ModalSection from "./modalSection";
 import Places from "./placeInKigali.json";
 import { IoMdArrowDropleft } from "react-icons/io";
+import { HOME_PAGE } from "core/navigation/constant";
+import Link from "next/link";
 import  uuid  from "react-uuid";
 import { LocationContext, ScrollContext } from "../../contexts/HomepageContext";
 
@@ -83,7 +85,11 @@ const LocationModal = ({ open, close }) => {
             alignItems="start"
           >
             {type === "districts" ? (
-              <Text fontSize="0.8rem">{"All Rwanda"}</Text>
+               <Link
+               href={`${HOME_PAGE}`}
+               as={`${HOME_PAGE}`}
+             ><Text fontSize="0.8rem">{"All Rwanda"}</Text>
+             </Link>
             ) : (
               <Button
                 onClick={() => setContent(Object.keys(Places), "districts")}

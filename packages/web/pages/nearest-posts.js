@@ -7,7 +7,6 @@ import { CURRENCY } from '../Config';
 import { SINGLE_POST_PAGE } from 'core/navigation/constant';
 import withLayout from '../hoc/withLayout';
 import PageMeta from '../components/PageMeta';
-
 import Heading from 'reusecore/src/elements/Heading';
 import Box from 'reusecore/src/elements/Box';
 import ListGrid from 'reusecore/src/elements/ListGrid';
