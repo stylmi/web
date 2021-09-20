@@ -42,15 +42,15 @@ const CategoryGridCard = styled(CategoryGridCardComp)`
   }
 `;
 
-export default function CategoryPost() {
+export default function CategoryPost({location}) {
   const QUERY_VARIABLES = {
-    LIMIT: 8,
+    LIMIT: 8
   };
   const { data, loading, error } = useQuery(GET_CATEGORIES, {
     variables: QUERY_VARIABLES,
   });
   if (error) return <OnError />;
-
+  const baseAddress = location ? `${SINGLE_CATEGORY_PAGE}/[slug]/[location]` : `${SINGLE_CATEGORY_PAGE}/[slug]`
   const categories =
     !loading && data && data.categories ? data.categories.data : [];
   categories.sort((a, b) => b.posts.total - a.posts.total);
@@ -60,10 +60,11 @@ export default function CategoryPost() {
       image: { url },
       slug,
     } = item;
+    const baseUrl = location ? `${SINGLE_CATEGORY_PAGE}/${slug}/${location}` : `${SINGLE_CATEGORY_PAGE}/${slug}`
     return (
       <Link
-        href={`${SINGLE_CATEGORY_PAGE}/[slug]`}
-        as={`${SINGLE_CATEGORY_PAGE}/${slug}`}
+        href= {baseAddress}
+        as={baseUrl}
       >
         <a style={{ height: '100%', display: 'block' }}>
           <CategoryGridCard

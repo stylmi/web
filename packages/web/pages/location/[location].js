@@ -82,7 +82,7 @@ export default withApollo(
             </LocationContext.Provider>
 
             <TextSearch />
-            <CategoryPost />
+            <CategoryPost location={searchLocation} />
           </Grid>
         </Card>
     

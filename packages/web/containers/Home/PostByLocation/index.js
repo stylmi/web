@@ -19,11 +19,12 @@ const PostByLocation = ({ getLocation }) => {
   const { location } = useContext(LocationContext);
   // QUERY SECTION
   const [loadingMore, toggleLoading] = useState(false);
+  const searchLocation = location.startsWith("All ")? location.split(" ")[1]: location
   const [page, paginate] = useState(1);
   const QUERY_VARIABLES = {
     page: 1,
     LIMIT: 12,
-    location,
+    location: searchLocation,
   };
   const { data, loading, error, fetchMore } = useQuery(GET_POST_BY_LOCATION, {
     variables: QUERY_VARIABLES,

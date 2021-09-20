@@ -45,7 +45,7 @@ export const typeDefs = `
     value: ID
     label: String
     image: Image
-    posts(limit: Int, page: Int ): PostWithCount
+    posts(limit: Int, page: Int, locationField: String, location: String ): PostWithCount
     createdAt: Date
     updatedAt: Date
   }
@@ -60,7 +60,8 @@ export const typeDefs = `
     lat: Float
     lng: Float
     formattedAddress: String,
-    locationCategory: String
+    sector: String,
+    district: String
   }
  
 
@@ -104,7 +105,9 @@ export const typeDefs = `
   input locationInput {
     lat: Float!
     lng: Float!
-    formattedAddress: String
+    formattedAddress: String,
+    sector: String,
+    district: String,
   }
   input imageInput {
     url: String
@@ -200,7 +203,7 @@ export const typeDefs = `
 
   type Query {
     posts(limit: Int, page: Int, status: String): PostWithTotal
-    locationPost(limit:Int, page: Int, location: String): PostWithTotal
+    locationPost(limit:Int, page: Int, field: String, location: String, locationField:String): PostWithTotal
     nearest(limit: Int, page: Int, location: locationInput): PostWithTotal
     searchPosts(searchParams: searchParams): PostWithTotal
     post(id: ID, slug: String, lat: Float, lng: Float): Post

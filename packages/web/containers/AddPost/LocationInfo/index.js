@@ -43,19 +43,21 @@ const LocationInfo = () => {
 	const [btnLoading, setBtnLoading] = useState(false);
 	const [postMutation, { data }] = useMutation(ADD_POST);
 
-	const handleLocation = (latlng, selected, category) => {
+	const handleLocation = (latlng, selected, sector, district) => {
 		let locationObject = {
 			lat: false,
 			lng: false,
 			formattedAddress: "",
-			locationCategory:"",
+			sector:"",
+			district:""
 		};
 		const location = {
 			...locationObject,
 			lat: latlng.lat,
 			lng: latlng.lng,
 			formattedAddress: selected,
-			locationCategory: category
+			sector,
+			district
 		};
 		dispatch({
 			type: "UPDATE_ADPOST",
@@ -163,7 +165,8 @@ const LocationInfo = () => {
 					lat: latlng.lat,
 					lng: latlng.lng,
 					formattedAddress: results[0].formatted_address,
-					locationCategory: results[0].address_components[3]
+					sector: results[0].address_components[3],
+					district: results[0].address_components[2]
 				};
 				dispatch({
 					type: "UPDATE_ADPOST",
@@ -172,12 +175,12 @@ const LocationInfo = () => {
 			}
 		});
 	};
-	const handleChange = (address, adminlevel1) => {
+	const handleChange = (address, sector, district) => {
 		dispatch({
 			type: "UPDATE_ADPOST",
 			payload: {
 				key: "location",
-				value: { ...adPost.location, formattedAddress: address, locationCategory: adminlevel1},
+				value: { ...adPost.location, formattedAddress: address, sector, district},
 			},
 		});
 	};

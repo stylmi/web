@@ -21,7 +21,10 @@ class Category extends Base {
     const value = query.value ? query.value : null;
 
     const data = await this.where({ field, value });
-    const posts = data && Object.keys(data).length ? data.posts : [];
+    let posts = data && Object.keys(data).length ? data.posts : [];
+    posts = posts.length > 0 && query.location ? posts.filter(post => 
+      post.formattedLocation[query.locationField] === query.location) 
+      : posts
     const startAt = (page - 1) * limit;
     const endAt = page * limit;
     const categoryPosts =

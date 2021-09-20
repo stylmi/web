@@ -10,20 +10,25 @@ import LocationWrapper, { SearchResultWrapper } from './style';
 const LocationSearchInput = props => {
   const [addressState, setAddressState] = useState({
     address: props.address || '',
-    locationCategory: props.locationCategory || ""
+
   });
 
-  const handleChange = (address, adminLevel1) => {
-    setAddressState({ ...addressState, address , locationCategory: adminLevel1});
+  const handleChange = (address) => {
+    setAddressState({ ...addressState, address });
   };
   const handleSelect = selected => {
-    setAddressState({ ...addressState, address: selected , locationCategory: adminLevel1});
+    setAddressState({ ...addressState, address: selected });
     const address = selected;
+    let sector, district;
     props.handleAddress(address);
     geocodeByAddress(selected)
-      .then(results => getLatLng(results[0])
+      .then(results => {
+        sector = results[0].address_components[3]
+        district = results[0].address_components[2]
+        return getLatLng(results[0])
+      }
       )
-      .then(latLng => props.handleLocation(latLng))
+      .then(latLng => props.handleLocation(latLng, address, sector, district))
       .catch(error => console.error('Error', error));
   };
 

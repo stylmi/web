@@ -23,7 +23,6 @@ const Query = {
     })
   },
   nearest: async (_, args) => {
-    console.log(args)
     const radius = args.radius ? args.radius : 5000;
     const location = args.location
       ? args.location
@@ -78,7 +77,10 @@ const Query = {
     }
   },
 
-  categories: (_, args) => category.all({ limit: args.limit, page: args.page }),
+  categories: (_, args) => {
+    const result = category.all({ limit: args.limit, page: args.page })
+    return result;
+  },
   category: (_, args) => {
     if (args.slug) {
       return category.where({ value: args.slug, field: 'slug' });
@@ -115,7 +117,9 @@ const CategoryQuery = {
       limit: args.limit,
       page: args.page,
       field: 'slug',
-    }),
+      locationField: args.locationField,
+      location: args.location
+    })
 };
 
 export { Query, AuthorQuery, PostQuery, CategoryQuery };

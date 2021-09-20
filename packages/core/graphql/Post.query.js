@@ -57,8 +57,8 @@ export const GET_POST = gql`
 `;
 
 export const GET_POST_BY_LOCATION = gql`
-  query getPostsByLocation($LIMIT: Int, $page: Int, $location: String) {
-    locationPost(limit: $LIMIT,page: $page, location: $location) {
+  query getPostsByLocation($LIMIT: Int, $page: Int, $field: String,$locationField:String, $location: String,) {
+    locationPost(limit: $LIMIT,page: $page, field: $field ,location: $location locationField: $locationField) {
       data {
         id
         slug

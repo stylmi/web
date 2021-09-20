@@ -60,11 +60,14 @@ const AddPost = ({ isLoggedIn, userId, email }) => {
                 data.post.formattedLocation.formattedAddress
                   ? data.post.formattedLocation.formattedAddress
                   : '',
-              locationCategory:
-              data.post.formattedLocation &&
-              data.post.formattedLocation.formattedAddress
-                ? data.post.formattedLocation.locationCategory
+              sector:
+              data.post.formattedLocation 
+                ? data.post.formattedLocation.sector
                 : '',
+              district:
+                data.post.formattedLocation 
+                  ? data.post.formattedLocation.district
+                  : '',
             };
           }
 
