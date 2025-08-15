@@ -40,7 +40,7 @@ const EarnPage: React.FC = () => {
           </div>
          <div className="inline-flex items-center gap-2 rounded-full border border-primary-200 bg-primary-50/70 px-4 py-2 text-primary-800 mb-4">
               <Sparkles className="w-4 h-4 text-primary-600" />
-              <span className="text-lg">Stlymi Earnings</span>
+              <span className="text-lg">Stylmi Earnings</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Earn with Stylmi</h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">

@@ -19,13 +19,13 @@ const Navigation: React.FC = () => {
   const isActive = (path: string) => location.pathname === path
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <nav className="w-full bg-white/80 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-14 md:h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-1">
-            <img src={logo} alt="Stylmi" className="w-12 h-12 rounded" />
-            <span className="text-4xl font-bold text-end text-[#ff7396]">tylmi</span>
+            <img src={logo} alt="Stylmi" className="w-8 h-8 rounded md:w-12 md:h-12" />
+            <span className="text-2xl md:text-4xl font-bold text-end text-[#ff7396]">tylmi</span>
           </Link>
 
           {/* Desktop Navigation */}

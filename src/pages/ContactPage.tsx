@@ -72,20 +72,6 @@ const ContactPage: React.FC = () => {
               <p className="text-gray-700">+1 (555) 000-0000</p>
               <p className="text-xs text-gray-500 mt-1">Placeholder number. Replace with your real contact.</p>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
-              className="card p-6"
-            >
-              <div className="flex items-center space-x-2 mb-2">
-                <MapPin className="w-5 h-5 text-primary-600" />
-                <h2 className="text-lg font-semibold text-gray-900">Location</h2>
-              </div>
-              <p className="text-gray-700">Remote-first</p>
-              <p className="text-xs text-gray-500 mt-1">We operate globally.</p>
-            </motion.div>
           </div>
 
           {/* Live chat */}

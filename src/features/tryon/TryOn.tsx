@@ -152,11 +152,15 @@ const TryOn: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-6 items-start">
             {/* Stage */}
             <div className="relative w-full rounded-2xl overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
-              <div className="w-full mx-auto flex items-center justify-center" style={{ aspectRatio: '2 / 3', maxHeight: 520 }}>
+              <div className="w-full mx-auto flex items-center justify-center aspect-[2/3] max-h-[420px] sm:max-h-[520px] contain-3d">
                 <img
                   src={imageSrc}
                   alt={gender === 'man' ? 'Male model' : 'Female model'}
-                  className="w-full h-full object-contain select-none pointer-events-none"
+                  className="w-full h-full object-contain select-none pointer-events-none image-crisp"
+                  loading="lazy"
+                  decoding="async"
+                  width={800}
+                  height={1200}
                   draggable={false}
                 />
               </div>

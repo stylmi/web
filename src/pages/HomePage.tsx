@@ -117,7 +117,7 @@ const HomePage: React.FC = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+              className="relative hidden md:block"
             >
               <div className="relative z-10">
                 <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-3xl shadow-2xl overflow-hidden">
@@ -145,8 +145,8 @@ const HomePage: React.FC = () => {
                 className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center shadow-lg"
               >
                 <Zap className="w-8 h-8 text-white" />
-              </motion.div>
-            </motion.div>
+              </motion.div> 
+            </motion.div> 
           </div>
         </div>
       </section>
