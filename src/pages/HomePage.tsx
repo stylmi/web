@@ -243,7 +243,7 @@ const HomePage: React.FC = () => {
               </p>
               <div className="mt-6">
                 <Link to="/earn" className="btn-outline inline-flex items-center gap-2">
-                  Get referral code
+                  Learn more about referrals
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
