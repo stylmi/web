@@ -1,8 +1,7 @@
 import React, { Suspense, lazy } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import banner from '../assets/images/banner4.png'
-
+import banner  from '../assets/images/banner5.png'
 const TryOn = lazy(() => import('../components/tryon/TryOn'))
 import {
   Camera,
@@ -122,12 +121,10 @@ const HomePage: React.FC = () => {
               className="relative hidden md:block"
             >
               <div className="relative z-10">
-                <div className="w-full h-80 bg-gradient-to-br  rounded-3xl shadow-2xl overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br flex items-center justify-center">
-                    <div className="relative w-full h-80 shadow-lg bg-black/20">
-                      <img src={banner} alt="try-on" className="absolute inset-0 w-full h-full object-fill rounded" />
-                      {/* <Camera className="w-24 h-24 text-primary-600 mx-auto mb-4" />
-                      <p className="text-primary-700 font-medium">Virtual Try-On Preview</p> */}
+                <div className="w-full h-96 bg-gradient-to-br rounded-3xl shadow-2xl overflow-hidden">
+                  <div className="w-full h-full bg-gradient-to-br  flex items-center justify-center">
+                    <div className="w-full h-full bg-black/10 p-3">
+                      <img src={banner} alt="Stylmi Banner" className="w-full h-full object-cover rounded-xl" />
                     </div>
                   </div>
                 </div>
