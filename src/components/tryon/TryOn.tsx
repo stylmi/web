@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Ruler, Sparkles, User, Info, Palette } from 'lucide-react';
-import womanSvgUrl from '@assets/images/woman1.svg';
-import manSvgUrl from '@assets/images/man1.svg';
+import womanSvgUrl from '@assets/images/woman1.png';
+import manSvgUrl from '@assets/images/man1.png';
 
 type Gender = 'man' | 'woman';
 
